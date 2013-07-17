@@ -1,0 +1,145 @@
+html, body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Lato', sans-serif;
+	}
+
+html, body{
+		background: #fff url(../images/background.png) top left no-repeat;
+		background-size: cover;
+	}
+
+svg{
+	display: block;
+	margin: 0 auto;
+	top: 0;
+	z-index: 99;
+	position: relative;
+}
+
+text{
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		text-transform: uppercase;
+	}
+
+
+g.Africa{
+	fill: #000000;
+}
+
+g.Europe{
+	fill: #0084c9;
+}
+
+g.Americas{
+	fill: #009e49;
+}
+
+g.Asia{
+	fill: #fca311;
+}
+
+g.Oceania{
+	fill: #e5053a;
+	background-image: url(../svg/medal.svg);
+}
+
+g.complete path{
+	opacity: 1;
+}
+
+g.complete text.continent {
+	opacity: 1;
+}
+
+h1,h2{
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
+		min-width: 1000px;
+	}
+h1{
+		padding-top: 30px;
+	}
+h2{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+text:hover{
+	cursor: pointer;
+}
+
+.bkg_rings text:hover{
+	cursor: default;
+}
+
+#icons{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	height: 100%;
+	margin-bottom: -700px;
+	height: 700px;
+	z-index: 1;
+}
+
+#female-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 275px;
+  left: 70px;
+}
+
+#male-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 155px;
+	left: 70px;
+}
+
+#athletes-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 25px;
+	left: 70px;
+}
+
+#population-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 25px;
+	right: 60px;
+}
+
+#gdp-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 275px;
+	right: 70px;
+}
+
+#country-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 155px;
+	right: 65px;
+}
+
+#total-medal-bg{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 460px;
+	left: 50%;
+	margin-left: -25px;
+}

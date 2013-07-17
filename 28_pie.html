@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>D3 | svg pie</title>
+	
+	<script src="lib/d3.v3.min.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+	text{
+			font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+			font-weight: 100;
+		}
+	</style>
+</head>
+<body>
+
+	<svg></svg>
+
+	<script>
+	
+	var svg = d3.select('svg')
+	
+	var data = d3.range(8).map(function(d){
+		return Math.random();
+	});
+				
+	/*
+	How to programmatically change the radius for each slice
+	*/
+
+	var InRadius = 20
+	var OutRadius = 30
+
+	var arc = d3.svg.arc()
+				.innerRadius(InRadius)
+				.outerRadius(OutRadius);
+				
+				
+	var pie = d3.layout.pie()
+				.value(function(d){
+					return d;
+				});
+				
+
+	// create an array of 20 colors  //It's a function not an array!
+	var cols = d3.scale.category20c()
+				
+	ring = svg.append('g')
+		.attr('transform', 'translate(150,150)')
+
+	ring.selectAll('path')
+		.data(pie(data))
+		.enter()
+			.append('path')
+			.attr('d', arc)
+			.style('fill', function(d, i){
+				return cols(i)
+			})
+	console.log(ring)
+
+	ring.append('circle')
+		 .attr('r',InRadius)
+		 .attr('opacity',0) //this circle allow to click inside the cirle
+
+
+
+	ring.on('click',function(){
+		 d3.select(this)
+		   .selectAll('path')
+		   .data(data)
+		   .enter()
+		   		.append('path')
+		   		.attr('x',function(d,i){
+		   			console.log(d)
+		   			return 1
+		   		})
+	})
+
+	</script>
+	
+</body>
+
+</html>	
